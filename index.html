@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<title>Arcane Pandect</title>
+<meta charset="UTF-8">
+<!--
+<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjBQsVNDtTKbC1AAABHklEQVQoz2XRv0ubURTG8c+b3Ka8Yoa0Jhi7FMUMpYOFol0i2sXq5Nji6uDkH+Dg4NChW/+DtrPQuULBRVykBXERMojERcRiBX+18XXIm5jEZ3rOfb7ncO69kZaK5oXUR/J2/ET7iHdydmVA1oK3dpy1UyVrCvel2IoZpB1M2fOnA7i07rVHLaDgpU3dqrlRaQFVNcc9wK1rs03bb9WQXr1xYFsxYNKwCVFXnLOkLG86Urbs3OOOMEEkI3HqR1B14b1n/mogEotTMPjmc1CUM+rURyWxfR9aq+GfJDjxRF3ZkEVPfTLqv9t0Qkyw5ZUvzmUNunLoq772jxwZCeq+G3NhSbBnn477ZDxvmnEbGmrmHrxGSg+oeOGX35Je4A5aeDwE+OHiGAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wNS0xMVQyMTo1Mjo1OSswMjowMP19KAwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDUtMTFUMjE6NTI6NTkrMDI6MDCMIJCwAAAAV3pUWHRSYXcgcHJvZmlsZSB0eXBlIGlwdGMAAHic4/IMCHFWKCjKT8vMSeVSAAMjCy5jCxMjE0uTFAMTIESANMNkAyOzVCDL2NTIxMzEHMQHy4BIoEouAOoXEXTyQjWVAAAAAElFTkSuQmCC" rel="icon" type="image/x-icon" />
+-->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-dark.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --universal-padding: 3px;
+  --table-body-hover-back-color: #ddd;
+  --fore-color: #e1e1e1;
+  --secondary-fore-color:#e1e1e1;
+  --back-color:#121212;
+  --secondary-back-color:#333;
+  --border-color:#ccc;
+  --secondary-border-color:#888;
+  --table-body-hover-back-color:#5c819f;
+}
+html {
+  font-size: 13px;
+}
+</style>
+<style>
+#snackbar {
+  visibility: hidden;
+  min-width: 125px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.3s, fadeout 0.3s 0.8s;
+  animation: fadein 0.3s, fadeout 0.3s 0.8s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="spell_list.js"></script>
+<script src="index.js"></script>
+<body>
+<main>
+<div style="margin-left:100px; margin-right:100px; margin-top:20px; margin-bottom:20px">
+  <div>
+  <form id="spell_select" method="get" onsubmit="return false;">
+    <table>
+    <tr>
+      <th>Name</th>
+      <th>Class</th>
+      <th>Level</th>
+      <th>School</th>
+      <th>Ritual</th>
+      <th>Casting Time</th>
+      <!--
+      <th>Components</th>
+      -->
+      <th>Concentration</th>
+      <th>Source</th>
+      <th style="text-align:right"><small><a href="conditions.html" target="_blank">Conditions</a></small></th>
+    </tr>
+    <tr>
+      <td id="searchName"></td>
+      <td><select id="selectClass">
+        <option value=""></option>
+        <option value="Artificer">Artificer</option>
+        <option value="Bard">Bard</option>
+        <option value="Cleric">Cleric</option>
+        <option value="Druid">Druid</option>
+        <option value="Paladin">Paladin</option>
+        <option value="Ranger">Ranger</option>
+        <option value="Sorcerer">Sorcerer</option>
+        <option value="Warlock">Warlock</option>
+        <option value="Wizard">Wizard</option>
+      </select></td>
+      <td><select id="selectLevel">
+        <option value=""></option>
+        <option value="Cantrip">Cantrip</option>
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4th">4th</option>
+        <option value="5th">5th</option>
+        <option value="6th">6th</option>
+        <option value="7th">7th</option>
+        <option value="8th">8th</option>
+        <option value="9th">9th</option>
+      </select></td>
+      <td><select id="selectSchool">
+        <option value=""></option>
+        <option value="Abjuration">Abjuration</option>
+        <option value="Conjuration">Conjuration</option>
+        <option value="Divination">Divination</option>
+        <option value="Enchantment">Enchantment</option>
+        <option value="Evocation">Evocation</option>
+        <option value="Illusion">Illusion</option>
+        <option value="Necromancy">Necromancy</option>
+        <option value="Transmutation">Transmutation</option>
+      </select></td>
+      <td><select id="selectRitual">
+        <option value=""></option>
+        <option value="no">no</option>
+        <option value="yes">yes</option>
+      </select></td>
+      <td><select id="selectCastingTime">
+        <option value=""></option>
+        <option value="1 action">1 action</option>
+        <option value="1 bonus action">1 bonus action</option>
+        <option value="1 reaction">1 reaction</option>
+<!--        <option value="other">other</option>    -->
+      </select></td>
+      <!--
+      <td><select id="selectComponents">
+        <option value=""></option>
+        <option value="no verbal">no verbal</option>
+        <option value="no somatic">no somatic</option>
+        <option value="no material">no material</option>
+        <option value="no cost">no cost</option>
+      </select></td>
+      -->
+      <td><select id="selectConcentration">
+        <option value=""></option>
+        <option value="no">no</option>
+        <option value="yes">yes</option>
+      </select></td>
+      <td><select id="selectSource">
+        <option value=""></option>
+        <option value="phb" title="Player's Handbook">PHB</option>
+        <option value="xge" title="Xanathar's Guide to Everything">XGE</option>
+        <option value="egw" title="Explorer's Guide to Wildemount">EGW</option>
+        <option value="tce" title="Tasha's Cauldron of Everything">TGE</option>
+      </select></td>
+      <td><input id="clearAll" type="button" value="Clear all"/></td>
+    </tr>
+    <tr>
+      <td id="name_selected"></td>
+      <td id="class_selected"></td>
+      <td id="level_selected"></td>
+      <td id="school_selected"></td>
+      <td id="ritual_selected"></td>
+      <td id="casting_time_selected"></td>
+      <!--
+      <td id="components_selected"></td>
+      -->
+      <td id="concentration_selected"></td>
+      <td id="source_selected"></td>
+      <td id="reset_selected"></td>
+    </tr>
+    </table>
+  </form>
+</div>
+<div class="container responsive-padding">
+<table class="hoverable spelllist" style="max-height:400px"><thead>
+    <tr>
+        <th class="col-sm-4" style="cursor: pointer">Name</th>
+        <th class="col-sm-1" style="cursor: pointer">Level</th>
+        <th class="col-sm-1" style="cursor: pointer">School</th>
+        <th class="col-sm-1" style="cursor: pointer">Ritual</th>
+        <th class="col-sm-2" style="cursor: pointer">Casting Time</th>
+        <th class="col-sm-1" style="cursor: pointer">Components</th>
+        <th class="col-sm-1" style="cursor: pointer">Concentration</th>
+        <th class="col-sm-1" style="cursor: pointer">Source</th>
+    </tr>
+</thead>
+<tbody>
+</tbody></table>
+</div>
+<div class="container" style="padding:10px; display: none" id="detailContainer">
+  <div class="row">
+    <div class="col-sm">
+      <h1 style="display: inline-block" id="detailName"></h1>
+      <h4 style="display: inline-block"><small id="detailLevelSchool"></small></h4>
+      <a href="" id="directLink"><img src="link.png"/></a>
+    </div>
+    <div id="clipboardItemHolder" style="display:none">
+      <a href="" id="clipboardItem"></a>
+    </div>
+  </div>
+  <ul style="font-size:15px">
+  <div class="row">
+    <div class="col-sm-6">
+      <li><strong style="display: inline-block">Casting Time:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailCastingTime"/></li>
+      <li><strong style="display: inline-block">Range:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailRange"/></li>
+      <li><strong style="display: inline-block">Duration:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailDuration"/></li>
+      <li><strong style="display: inline-block">Classes:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailClasses"/></li>
+    </div>
+    <div class="col-sm-6">
+      <li><strong style="display: inline-block">Ritual:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailRitual"/></li>
+      <li><strong style="display: inline-block">Components:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailComponents"/></li>
+      <li><strong style="display: inline-block">Concentration:&nbsp;&nbsp;</strong><div style="display: inline-block" id="detailConcentration"/></li>
+    </div>
+  </div>
+  </ul>
+  <div class="row">
+    <div class="col-sm">
+      <p style="font-size:15px" id="detailDescription"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <table style="display:none" id="detailCreature">
+        <thead></thead><tbody>
+          <tr><td id="creatureNameBlock"></td></tr>
+          <tr><td id="creatureAcHpBlock"></td></tr>
+          <tr><td id="creatureAbilityBlock"></td></tr>
+          <tr><td id="creatureSkillBlock"></td></tr>
+          <tr id="creatureFeatureHolder"><td id="creatureFeatureBlock"></td></tr>
+          <tr id="creatureActionHolder"><td id="creatureActionBlock"></td></tr>
+          <tr id="creatureBonusActionHolder"><td id="creatureBonusActionBlock"></td></tr>
+          <tr id="creatureReactionHolder"><td id="creatureReactionBlock"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<div id="snackbar">Link copied</div>
+</main>
+</body>
+</html>
