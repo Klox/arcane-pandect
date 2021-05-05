@@ -5365,7 +5365,7 @@ var spell_list = {
       "duration":"1 round",
       "level":"1st",
       "school":"Abjuration",
-      "description":"This spell is cast as a reaction taken when you are hit by an attack or targeted by the magic missile spell.<br/>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from<br/>magic missile.",
+      "description":"This spell is cast as a reaction taken when you are hit by an attack or targeted by the magic missile spell.<br/>An invisible barrier of magical force appears and protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from magic missile.",
       "full_components":"V, S"
    },
    "Wall of Stone":{
