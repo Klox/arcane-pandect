@@ -9306,5 +9306,134 @@ var spell_list = {
      "concentration":"yes",
      "description":"Uttering an incantation, you draw on the magic of the Lower Planes or Upper Planes (your choice) to transform yourself. You gain the following benefits until the spell ends:<ul><li>You are immune to fire and poison damage (Lower Planes) or radiant and necrotic damage (Upper Planes).</li><li>You are immune to the poisoned condition (Lower Planes) or the charmed condition (Upper Planes).</li><li>Spectral wings appear on your back, giving you a flying speed of 40 feet.</li><li>You have a +2 bonus to AC.</li><li>All your weapon attacks are magical, and when you make a weapon attack, you can use your spellcasting ability modifier, instead of Strength or Dexterity, for the attack and damage rolls.</li><li>You can attack twice, instead of once, when you take the Attack action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that lets you attack more than once when you take the Attack action on your turn.</li></ul>",
      "full_components":"V, S, M (an object engraved with a symbol of the Outer Planes, worth at least 500 gp)"
+   },
+   "Distort Value":{
+     "components":"V",
+     "page":"ai 75",
+     "range":"Touch",
+     "school":"Illusion",
+     "level":"1st",
+     "duration":"8 hours",
+     "casting_time":"1 minute",
+     "class":{
+       "Bard":"yes",
+       "Sorcerer":"yes",
+       "Warlock":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Distort Value",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"Do you need to squeeze a few more gold pieces out of a merchant as you try to sell that weird octopus statue you liberated from the chaos temple? Do you need to downplay the worth of some magical assets when the tax collector stops by? <i>Distort value</i> has you covered.<br/>You cast this spell on an object no more than 1 foot on a side, doubling the object's perceived value by adding illusory flourishes or polish to it, or reducing its perceived value by half with the help of illusory scratches, dents, and other unsightly features. Anyone examining the object can ascertain its true value with a successful Intelligence (Investigation) check against your spell save DC.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the maximum size of the object increases by 1 foot for each slot level above 1st.",
+     "full_components":"V"
+   },
+   "Fast Friends":{
+     "components":"V",
+     "page":"ai 75",
+     "range":"30 feet",
+     "school":"Enchantment",
+     "level":"3rd",
+     "duration":"1 hour",
+     "casting_time":"1 action",
+     "class":{
+       "Bard":"yes",
+       "Cleric":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Fast Friends",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"When you need to make sure something gets done, you can't rely on vague promises, sworn oaths, or binding contracts of employment. When you cast this spell, choose one humanoid within range that can see and hear you, and that can understand you. The creature must succeed on a Wisdom saving throw or become charmed by you for the duration. While the creature is charmed in this way, it undertakes to perform any services or activities you ask of it in a friendly manner, to the best of its ability.<br/>You can set the creature new tasks when a previous task is completed, or if you decide to end its current task. If the service or activity might cause harm to the creature, or if it conflicts with the creature's normal activities and desires, the creature can make another Wisdom saving throw to try to end the effect. This save is made with advantage if you or your companions are fighting the creature. If the activity would result in certain death for the creature, the spell ends.<br/>When the spell ends, the creature knows it was charmed by you.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher. you can target one additional creature for each slot level above 3rd.",
+     "full_components":"V"
+   },
+   "Gift of Gab":{
+     "components":"VSR",
+     "page":"ai 76",
+     "range":"Self",
+     "school":"Enchantment",
+     "level":"2nd",
+     "duration":"Instantaneous",
+     "casting_time":"1 reaction",
+     "class":{
+       "Bard":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Gift of Gab",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"Jim Darkmagic is said to have invented this spell, originally calling it <i>I said what?!</i> Have you ever been talking to the local monarch and accidentally mentioned how their son looks like your favorite hog from when you were growing up on the family farm? We've all been there! But rather than being beheaded for an honest slip of the tongue, you can pretend it never happened — by ensuring that no one knows it happened.<br/>When you cast this spell, you skillfully reshape the memories of listeners in your immediate area, so that each creature of your choice within 5 feet of you forgets everything you said within the last 6 seconds. Those creatures then remember that you actually said the words you speak as the verbal component of the spell.",
+     "full_components":"V, S, R (2 gp)"
+   },
+   "Incite Greed":{
+     "components":"VSMgp",
+     "page":"ai 76",
+     "range":"30 feet",
+     "school":"Enchantment",
+     "level":"3rd",
+     "duration":"1 minute",
+     "casting_time":"1 action",
+     "class":{
+       "Cleric":"yes",
+       "Sorcerer":"yes",
+       "Warlock":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Incite Greed",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"When you cast this spell, you present the gem used as the material component and choose any number of creatures within range that can see you. Each target must succeed on a Wisdom saving throw or be charmed by you until the spell ends, or until you or your companions do anything harmful to it. While charmed in this way, a creature can do nothing but use its movement to approach you in a safe manner. While an affected creature is within 5 feel of you, it cannot move, but simply stares greedily at the gem you present.<br/>At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target.",
+     "full_components":"V, S, M (a gem worth at least 50 gp)"
+   },
+   "Jim's Glowing Coin":{
+     "components":"SMgpR",
+     "page":"ai 76",
+     "range":"60 feet",
+     "school":"Enchantment",
+     "level":"2nd",
+     "duration":"1 minute",
+     "casting_time":"1 action",
+     "class":{
+       "Wizard":"yes"
+     },
+     "name":"Jim's Glowing Coin",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"Of the many tactics employed by master magician and renowned adventurer Jim Darkmagic, the old glowing coin trick is a time-honored classic. When you cast the spell, you hurl the coin that is the spell's material component to any spot within range. The coin lights up as if under the effect of a <i>light</i> spell. Each creature of your choice that you can see within 30 feet of the coin must succeed on a Wisdom saving throw or be distracted for the duration. While distracted, a creature has disadvantage on Wisdom (Perception) checks and iniciative rolls.",
+     "full_components":"S, M (a coin), R (2gp)"
+   },
+   "Jim's Magic Missle":{
+     "components":"VSR",
+     "page":"ai 76",
+     "range":"120 feet",
+     "school":"Evocation",
+     "level":"1st",
+     "duration":"Instantaneous",
+     "casting_time":"1 action",
+     "class":{
+       "Wizard":"yes"
+     },
+     "name":"Jim's Magic Missle",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"Any apprentice wizard can cast a boring old <i>magic missile</i>. Sure, it always strikes its target. Yawn. Do away with the drudgery of your grandfather's magic with this improved version of the spell, as used by Jim Darkmagic!<br/>You create three twisting, whistling, hypoallergenic, gluten-free darts of magical force. Each dart targets a creature of your choice that you can see within range. Make a ranged spell attack for each missile. On a hit, a missile deals 2d4 force damage to its target.<br/>lf the attack roll scores a critical hit, the target of that missile takes 5d4 force damage instead of you rolling damage twice for a critical hit. If the attack roll for any missile is a 1, all missiles miss their targets and blow up in your face. dealing 1 force damage per missile to you.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart, and the royalty component increases by 1 gp, for each slot level above 1st.",
+     "full_components":"V, S, R (1 gp)"
+   },
+   "Motivational Speech":{
+     "components":"V",
+     "page":"ai 77",
+     "range":"60 feet",
+     "school":"Enchantment",
+     "level":"3rd",
+     "duration":"1 hour",
+     "casting_time":"1 minute",
+     "class":{
+       "Bard":"yes",
+       "Cleric":"yes"
+     },
+     "name":"Motivational Speech",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"You address allies, staff, or innocent bystanders to exhort and inspire them to greatness, whether they have anything to get excited about or not. Choose up to five creatures within range that can hear you. For the duration, each affected creature gains 5 temporary hit points and has advantage on Wisdom saving throws. If an affected creature is hit by an attack, it has advantage on the next attack roll it makes. Once an affected creature loses the temporary hit points granted by this spell, the spell ends for that creature.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd.",
+     "full_components":"V"
    }
 };
