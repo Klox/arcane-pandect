@@ -9435,5 +9435,102 @@ var spell_list = {
      "concentration":"no",
      "description":"You address allies, staff, or innocent bystanders to exhort and inspire them to greatness, whether they have anything to get excited about or not. Choose up to five creatures within range that can hear you. For the duration, each affected creature gains 5 temporary hit points and has advantage on Wisdom saving throws. If an affected creature is hit by an attack, it has advantage on the next attack roll it makes. Once an affected creature loses the temporary hit points granted by this spell, the spell ends for that creature.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd.",
      "full_components":"V"
+   },
+   "Borrowed Knowledge":{
+     "components":"VSMgp",
+     "page":"scc 37",
+     "range":"Self",
+     "school":"Divination",
+     "level":"2nd",
+     "duration":"1 hour",
+     "casting_time":"1 action",
+     "class":{
+       "Bard":"yes",
+       "Cleric":"yes",
+       "Warlock":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Borrowed Knowledge",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"You draw on knowledge from spirits of the past. Choose one skill in which you lack proficiency. For the spell's duration, you have proficiency in the chosen skill. The spell ends early if you cast it again.",
+     "full_components":"V, S, M (a book worth at least 25 gp)"
+   },
+   "Kinetic Jaunt":{
+     "components":"S",
+     "page":"scc 37",
+     "range":"Self",
+     "school":"Transmutation",
+     "level":"2nd",
+     "duration":"1 minute",
+     "casting_time":"1 bonus action",
+     "class":{
+       "Artificer":"yes",
+       "Bard":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Kinetic Jaunt",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"You magically empower your movement with dance-like steps, giving yourself the following benefits for the duration.<br/><ul><li>Your walking speed increases by 10 feet.</li><li>You don't provoke opportunity attacks.</li><li>You can move through the space of another creature, and it doesn't count as difficult terrain. If you end your turn in another creature's space, you are shunted to the last unoccupied space you occupied, and you take 1d8 force damage.</li></ul>",
+     "full_components":"S"
+   },
+   "Silvery Barbs":{
+     "components":"V",
+     "page":"scc 38",
+     "range":"60 feet",
+     "school":"Enchantment",
+     "level":"1st",
+     "duration":"Instantaneous",
+     "casting_time":"1 reaction",
+     "class":{
+       "Bard":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Silvery Barbs",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"When you see a creature within 60 feet of you succeed on an attack roll, an ability check, or a saving throw, you can use your reaction to magically distract the triggering creature and turn its momentary uncertainty into encouragement for another creature. The triggering creature must reroll the d20 and use the lower roll.<br/>You can then choose a different creature you can see within range (you can choose yourself). The chosen creature has advantage on the next attack roll, ability check, or saving throw it makes within 1 minute. A creature can be empowered by only one use of this spell at a time.",
+     "full_components":"V"
+   },
+   "Vortex Warp":{
+     "components":"VS",
+     "page":"scc 38",
+     "range":"90 feet",
+     "school":"Conjuration",
+     "level":"2nd",
+     "duration":"Instantaneous",
+     "casting_time":"1 action",
+     "class":{
+       "Artificer":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Vortex Warp",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"You magically twist space around another creature you can see within range. The target must succeed on a Constitution saving throw (the target can choose to fail), or the target is teleported to an unoccupied space of your choice that you can see within range. The chosen space must be on a surface or in a liquid that can support the target without the target having to squeeze.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the range of the spell increases by 30 feet for each slot level above 2nd.",
+     "full_components":"V, S"
+   },
+   "Wither and Bloom":{
+     "components":"VSM",
+     "page":"scc 38",
+     "range":"60 feet",
+     "school":"Necromancy",
+     "level":"2nd",
+     "duration":"Instantaneous",
+     "casting_time":"1 action",
+     "class":{
+       "Druid":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Wither and Bloom",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"You invoke both death and life upon a 10-foot-radius sphere centered on a point within range. Each creature of your choice in that area must make a Constitution saving throw, taking 2d6 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical vegetation in that area withers.<br/>In addition, one creature of your choice in that area can spend and roll one of its unspent Hit Dice and regain a number of hit points equal to the roll plus your spellcasting ability modifier.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot above the 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd.",
+     "full_components":"V, S, M (a withered vine twisted into a loop)"
    }
 };
