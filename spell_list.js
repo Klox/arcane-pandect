@@ -7440,7 +7440,7 @@ var spell_list = {
       "page":"phb 245",
       "range":"Touch",
       "components":"VSMgp",
-      "description":"When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diam- eter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.<br/>The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.<br/>You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.<br/>You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.<br/>When you inscribe the glyph, choose explosive runes or a spell glyph.<br/><strong>Explosive Runes.</strong> When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.<br/><strong>Spell Glyph.</strong> You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.<br/>At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage of an<br/>explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.",
+      "description":"When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.<br/>The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.<br/>You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.<br/>You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.<br/>When you inscribe the glyph, choose explosive runes or a spell glyph.<br/><strong>Explosive Runes.</strong> When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.<br/><strong>Spell Glyph.</strong> You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.<br/>At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.",
       "full_components":"V, S, M (incense and powdered diamond worth at least 200 gp, which the spell consumes)"
    },
    "Fireball":{
@@ -9532,5 +9532,148 @@ var spell_list = {
      "concentration":"no",
      "description":"You invoke both death and life upon a 10-foot-radius sphere centered on a point within range. Each creature of your choice in that area must make a Constitution saving throw, taking 2d6 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical vegetation in that area withers.<br/>In addition, one creature of your choice in that area can spend and roll one of its unspent Hit Dice and regain a number of hit points equal to the roll plus your spellcasting ability modifier.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot above the 2nd, and the number of Hit Dice that can be spent and added to the healing roll increases by one for each slot above 2nd.",
      "full_components":"V, S, M (a withered vine twisted into a loop)"
+   },
+   "Summon Draconic Spirit":{
+     "components":"VSMgp",
+     "page":"ftd 21",
+     "range":"60 feet",
+     "school":"Conjuration",
+     "level":"5th",
+     "duration":"1 hour",
+     "casting_time":"1 action",
+     "class":{
+       "Druid":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Summon Draconic Spirit",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"You call forth a draconic spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the Draconic Spirit stat block. When you cast this spell, choose a family of dragon: chromatic, gem, or metallic. The creature resembles a dragon of the chosen family, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.<br/>The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its move to avoid danger.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block.",
+     "full_components":"V, S, M (an object with the image of a dragon engraved on it, worth at least 500 gp)",
+     "creature":{
+       "name":"<h3>Draconic Spirit</h3><small><i>Large dragon</i></small>",
+       "ac_hp":"<strong>Armor Class</strong> 14 + the level of the spell (natural armor)<br/><strong>Hit Points</strong> 50 + 10 for each spell level above 5th (the dragon has a number of Hit Dice [d10s] equal to the level of the spell)<br/><strong>Speed</strong> 30 ft., fly 60 ft., swim 30 ft.",
+       "abilities":"<strong>STR</strong>&nbsp;19&nbsp;(+4) <strong>DEX</strong>&nbsp;14&nbsp;(+2) <strong>CON</strong>&nbsp;17&nbsp;(+3) <strong>INT</strong>&nbsp;10&nbsp;(+0) <strong>WIS</strong>&nbsp;14&nbsp;(+2) <strong>CHA</strong>&nbsp;14&nbsp;(+2)",
+       "skills":"<strong>Damage Resistances</strong> acid, cold, fire, lightning, and poison (Chromatic and Metallic Only); force, necrotic, psychic, radiant, and thunder (Gem Only)<br/><strong>Condition Immunities</strong> charmed, frightened, poisoned<br/><strong>Senses</strong> blindsight 30 ft., darkvision 60 ft., passive Perception 12<br/><strong>Languages</strong> Draconic, understands the languages you speak<br/><strong>Challenge</strong> -<br/><strong>Proficiency Bonus</strong> equals your bonus",
+       "features":"<strong>Shared Resistances.</strong> When you summon the dragon, choose one of its damage resistances. You have resistance to the chosen damage type until the spell ends.",
+       "actions":"<strong>Multiattack.</strong> The dragon makes a number of Rend attacks equal to half the spell's level (rounded down), and it uses Breath Weapon.<br/><strong>Rend.</strong> <i>Melee Weapon Attack:</i> your spell attack modifier to hit, reach 10 ft., one target. Hit: 1d6 + 4 + the spell's level piercing damage.<br/><strong>Breath Weapon.</strong> The dragon exhales destructive energy in a 30-foot cone. Each creature in that area must make a Dexterity saving throw against your spell save DC. A creature takes 2d6 damage of a type this dragon has resistance to (your choice) on a failed save, or half as much damage on a successful one.",
+       "bonus_actions":"",
+       "reactions":""
+     }
+   },
+   "Rime's Binding Ice":{
+     "components":"SM",
+     "page":"ftd 21",
+     "range":"Self (30-foot cone)",
+     "school":"Evocation",
+     "level":"2nd",
+     "duration":"Instantaneous",
+     "casting_time":"1 action",
+     "class":{
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Rime's Binding Ice",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"A burst of cold energy emanates from you in a 30-foot cone. Each creature in that area must make a Constitution saving throw. On a failed save, a creature takes 3d8 cold damage and is hindered by ice formations for 1 minute, or until it or another creature within reach of it uses an action to break away the ice. A creature hindered by ice has its speed reduced to 0. On a successful save, a creature takes half as much damage and isn't hindered by ice.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, increase the cold damage by 1d8 for each slot level above 2nd.",
+     "full_components":"S, M (a vial of meltwater)"
+   },
+   "Raulothim's Psychic Lance":{
+     "components":"V",
+     "page":"ftd 21",
+     "range":"120 feet",
+     "school":"Enchantment",
+     "level":"4th",
+     "duration":"Instantaneous",
+     "casting_time":"1 action",
+     "class":{
+       "Bard":"yes",
+       "Sorcerer":"yes",
+       "Warlock":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Raulothim's Psychic Lance",
+     "ritual":"no",
+     "concentration":"no",
+     "description":"You unleash a shimmering lance of psychic power from your forehead at a creature that you can see within range. Alternatively, you can utter a creature's name. If the named target is within range, it becomes the spell's target even if you can't see it. If the named target isn't within range, the lance dissipates without effect.<br/>The target must make an Intelligence saving throw. On a failed save, the target takes 7d6 psychic damage and is incapacitated until the start of your next turn. On a successful save, the creature takes half as much damage and isn't incapacitated.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d6 for each slot level above 4th.",
+     "full_components":"V"
+   },
+   "Nathair's Mischief":{
+     "components":"SM",
+     "page":"ftd 20",
+     "range":"60 feet",
+     "school":"Illusion",
+     "level":"2nd",
+     "duration":"1 minute",
+     "casting_time":"1 action",
+     "class":{
+       "Bard":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Nathair's Mischief",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"You fill a 20-foot cube you can see within range with fey and draconic magic. Roll on the Mischievous Surge table to determine the magical effect produced, and roll again at the start of each of your turns until the spell ends. You can move the cube up to 10 feet before you roll.<br/><table><table><thead><tr><th>d4</th><th>Mischievous Surge Effect</th></tr></thead><tbody><tr><td>1</td><td>The smell of apple pie fills the air, and each creature in the cube must succeed on a Wisdom saving throw or become charmed by you until the start of your next turn.</td></tr><tr><td>2</td><td>Bouquets of flowers appear all around, and each creature in the cube must succeed on a Dexterity saving throw or be blinded until the start of your next turn as the flowers spray water in their faces.</td></tr><tr><td>3</td><td>Each creature in the cube must succeed on a Wisdom saving throw or begin giggling until the start of your next turn. A giggling creature is incapacitated and uses all its movement to move in a random direction.</td></tr><tr><td>4</td><td>Drops of molasses hover in the cube, making it difficult terrain until the start of your next turn.</td></tr></tbody></table>",
+     "full_components":"S, M (a piece of crust from an apple pie)"
+   },
+   "Fizban's Platinum Shield":{
+     "components":"VSMgp",
+     "page":"ftd 20",
+     "range":"60 feet",
+     "school":"Abjuration",
+     "level":"6th",
+     "duration":"1 minute",
+     "casting_time":"1 bonus action",
+     "class":{
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Fizban's Platinum Shield",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"You create a field of silvery light that surrounds a creature of your choice within range (you can choose yourself). The field sheds dim light out to 5 feet. While surrounded by the field, a creature gains the following benefits:<br/><strong>Cover.</strong> The creature has half cover.<br/><strong>Damage Resistance.</strong> The creature has resistance to acid, cold, fire, lightning, and poison damage.<br/><strong>Evasion.</strong> If the creature is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the creature instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.<br/>As a bonus action on subsequent turns, you can move the field to another creature within 60 feet of the field.",
+     "full_components":"V, S, M (a platinum-plated dragon scale, worth at least 500 gp)"
+   },
+   "Draconic Transformation":{
+     "components":"VSMgp",
+     "page":"ftd 19",
+     "range":"Self",
+     "school":"Transmutation",
+     "level":"7th",
+     "duration":"1 minute",
+     "casting_time":"1 bonus action",
+     "class":{
+       "Druid":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Draconic Transformation",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"With a roar, you draw on the magic of dragons to transform yourself, taking on draconic features. You gain the following benefits until the spell ends:<br/><strong>Blindsight.</strong> You have blindsight with a range of 30 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature, unless the creature successfully hides from you.<br/><strong>Breath Weapon.</strong> When you cast this spell, and as a bonus action on subsequent turns for the duration, you can exhale shimmering energy in a 60-foot cone. Each creature in that area must make a Dexterity saving throw, taking 6d8 force damage on a failed save, or half as much damage on a successful one.<br><strong>Wings.</strong> Incorporeal wings sprout from your back, giving you a flying speed of 60 feet.",
+     "full_components":"V, S, M (a statuette of a dragon, worth at least 500 gp)"
+   },
+   "Ashardalon's Stride":{
+     "components":"VS",
+     "page":"ftd 19",
+     "range":"Self",
+     "school":"Transmutation",
+     "level":"3rd",
+     "duration":"1 minute",
+     "casting_time":"1 bonus action",
+     "class":{
+       "Artificer":"yes",
+       "Ranger":"yes",
+       "Sorcerer":"yes",
+       "Wizard":"yes"
+     },
+     "name":"Ashardalon's Stride",
+     "ritual":"no",
+     "concentration":"yes",
+     "description":"The billowing flames of a dragon blast from your feet, granting you explosive speed. For the duration, your speed increases by 20 feet and moving doesn't provoke opportunity attacks.<br/>When you move within 5 feet of a creature or an object that isn't being worn or carried, it takes 1d6 fire damage from your trail of heat. A creature or object can take this damage only once during a turn.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, increase your speed by 5 feet for each spell slot level above 3rd. The spell deals an additional 1d6 fire damage for each slot level above 3rd.",
+     "full_components":"V, S"
    }
 };
