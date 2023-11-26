@@ -3762,7 +3762,7 @@ var spell_list = {
          "Sorcerer":"yes"
       },
       "casting_time":"1 action",
-      "description":"Until the spell ends, wind whirls around you, and you gain the following benefits:<ul><li>Ranged weapon attacks made against you have disadvantage on the attack roll.</li><li>You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can some-how prevent it.</li><li>You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.</li></ul>",
+      "description":"Until the spell ends, wind whirls around you, and you gain the following benefits:<ul><li>Ranged weapon attacks made against you have disadvantage on the attack roll.</li><li>You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.</li><li>You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes 2d10 bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube.</li></ul>",
       "full_components":"V, S"
    },
    "Protection from Evil and Good":{
@@ -6028,7 +6028,7 @@ var spell_list = {
          "Paladin":"yes"
       },
       "name":"Ceremony",
-      "description":"You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.<br/><br/>Atonement: You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment.<br/><br/>Bless Water: You touch one vial of water and cause it to become holy water.<br/><br/>Coming of Age: You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a d4 and add the number rolled to the ability check. A creature can benefit from this rite only once.<br/><br/>Dedication: You touch one humanoid who wishes to be dedicated to your god’s service. For the next 24 hours, whenever the target makes a saving throw, it can roll a d4 and add the number rolled to the save. A creature can benefit from this rite only once.<br/><br/>Funeral Rite: You touch one corpse, and for the next 7 days, the target can’t become undead by any means short of a wish spell.<br/><br/>Wedding: You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.",
+      "description":"You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.<br/><br/><strong>Atonement.</strong> You touch one willing creature whose alignment has changed, and you make a DC 20 Wisdom (Insight) check. On a successful check, you restore the target to its original alignment.<br/><br/><strong>Bless Water.</strong> You touch one vial of water and cause it to become holy water.<br/><br/><strong>Coming of Age.</strong> You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a d4 and add the number rolled to the ability check. A creature can benefit from this rite only once.<br/><br/><strong>Dedication.</strong> You touch one humanoid who wishes to be dedicated to your god’s service. For the next 24 hours, whenever the target makes a saving throw, it can roll a d4 and add the number rolled to the save. A creature can benefit from this rite only once.<br/><br/><strong>Funeral Rite.</strong> You touch one corpse, and for the next 7 days, the target can’t become undead by any means short of a wish spell.<br/><br/><strong>Wedding.</strong> You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.",
       "full_components":"V, S, M (25 gp worth of powdered silver, which the spell consumes)"
    },
    "Dimension Door":{
@@ -7365,7 +7365,7 @@ var spell_list = {
       },
       "name":"Pyrotechnics",
       "casting_time":"1 action",
-      "description":"Choose an area of nonmagical flame that you can see and that fits within a 5-foot cube within range. You can extinguish the fire in that area, and you create either fireworks or smoke when you do so.<br/><br/>Fireworks: The target explodes with a dazzling display of colors. Each creature within 10 feet of the target must succeed on a Constitution saving throw or become blinded until the end of your next turn.<br/><br/>Smoke: Thick black smoke spreads out from the target in a 20-foot radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.",
+      "description":"Choose an area of nonmagical flame that you can see and that fits within a 5-foot cube within range. You can extinguish the fire in that area, and you create either fireworks or smoke when you do so.<br/><br/><strong>Fireworks.</strong> The target explodes with a dazzling display of colors. Each creature within 10 feet of the target must succeed on a Constitution saving throw or become blinded until the end of your next turn.<br/><br/><strong>Smoke.</strong> Thick black smoke spreads out from the target in a 20-foot radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.",
       "full_components":"V, S"
    },
    "Confusion":{
@@ -8158,26 +8158,6 @@ var spell_list = {
          "Sorcerer":"yes"
       },
       "description":"Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.",
-      "full_components":"V"
-   },
-   "Sword Burst":{
-      "concentration":"no",
-      "ritual":"no",
-      "class":{
-        "Artificer":"yes",
-         "Wizard":"yes",
-         "Warlock":"yes",
-         "Sorcerer":"yes"
-      },
-      "name":"Sword Burst",
-      "casting_time":"1 action",
-      "level":"Cantrip",
-      "duration":"Instantaneous",
-      "school":"Conjuration",
-      "components":"V",
-      "page":"scag 143",
-      "range":"5 feet",
-      "description":"You create a momentary circle of spectral blades that sweep around you. Each creature within range, other than you, must succeed on a Dexterity saving throw or take 1d6 force damage.<br/>This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
       "full_components":"V"
    },
    "Primordial Ward":{
