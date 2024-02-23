@@ -117,19 +117,21 @@ input:checked + .slider:before {
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="original_spells.js"></script>
+<script src="elderbane_spells.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 <script src="index.js"></script>
 <body>
 <main>
 <div style="margin-left:100px; margin-right:100px; margin-top:20px; margin-bottom:20px">
   <div>
-<!--  <span>
-    Normal&nbsp;
+  <span>
+    Original&nbsp;
     <label class="switch">
-      <input id="elderbaneList" type="checkbox">
+      <input id="elderbaneSlider" type="checkbox">
       <span class="slider"></span>
     </label>
     &nbsp;Elderbane
-  </span>-->
+  </span>
   <form id="spell_select" method="get" onsubmit="return false;">
     <table>
     <tr>
@@ -219,6 +221,7 @@ input:checked + .slider:before {
         <option value="ai" title="Acquisitions Incorporated">AI</option>
         <option value="scc" title="Strixhaven: Curriculum of Chaos">SCC</option>
         <option value="ftd" title="Fizban's Treasury of Dragons">FTD</option>
+        <option value="elder" title="Elderbane">ELDER</option>
       </select></td>
       <td><input id="clearAll" type="button" value="Clear all"/></td>
     </tr>

@@ -1,18 +1,43 @@
 $(function() {
-  // populate the spell list
-  spell_list = original_spells;
   var spelllist = $('.spelllist');
-  $.each(spell_list, function(index, item) {
-    var table_row = $('<tr>', {id: index, 'sp-class': Object.keys(item.class).join(',')});
-    table_row.append($('<td>', {'class': 'sp-name col-sm-4', 'data-label': 'Name', html: item.name}),
-                    $('<td>', {'class': 'sp-level col-sm-1', 'data-label': 'Level', html: item.level}),
-                    $('<td>', {'class': 'sp-school col-sm-1', 'data-label': 'School', html: item.school}),
-                    $('<td>', {'class': 'sp-ritual col-sm-1', 'data-label': 'Ritual', html: item.ritual.replace('no','-')}),
-                    $('<td>', {'class': 'sp-casting-time col-sm-2', 'data-label': 'Casting Time', html: item.casting_time}),
-                    $('<td>', {'class': 'sp-components col-sm-1', 'data-label': 'Components', html: item.components}),
-                    $('<td>', {'class': 'sp-concentration col-sm-1', 'data-label': 'Concentration', html: item.concentration.replace('no','-')}),
-                    $('<td>', {'class': 'sp-source col-sm-1', 'data-label': 'Source', html: item.page}));
-    spelllist.append(table_row);
+  function populateSpellList() {
+    spelllist.find("tbody > tr").remove();
+    $.each(spell_list, function(index, item) {
+      var table_row = $('<tr>', {id: index, 'sp-class': Object.keys(item.class).join(',')});
+      table_row.append($('<td>', {'class': 'sp-name col-sm-4', 'data-label': 'Name', html: item.name}),
+                      $('<td>', {'class': 'sp-level col-sm-1', 'data-label': 'Level', html: item.level}),
+                      $('<td>', {'class': 'sp-school col-sm-1', 'data-label': 'School', html: item.school}),
+                      $('<td>', {'class': 'sp-ritual col-sm-1', 'data-label': 'Ritual', html: item.ritual.replace('no','-')}),
+                      $('<td>', {'class': 'sp-casting-time col-sm-2', 'data-label': 'Casting Time', html: item.casting_time}),
+                      $('<td>', {'class': 'sp-components col-sm-1', 'data-label': 'Components', html: item.components}),
+                      $('<td>', {'class': 'sp-concentration col-sm-1', 'data-label': 'Concentration', html: item.concentration.replace('no','-')}),
+                      $('<td>', {'class': 'sp-source col-sm-1', 'data-label': 'Source', html: item.page}));
+      spelllist.append(table_row);
+    });
+    $(".spelllist > tbody > tr").on('click', rowClick);
+  }
+
+  if (Cookies.get('show_elderbane') == 'yes') {
+    $('#elderbaneSlider').prop( "checked", true);
+    spell_list = elderbane_spells;
+  } else {
+    $('#elderbaneSlider').prop( "checked", false);
+    spell_list = original_spells;
+  }
+  populateSpellList();
+  $('#elderbaneSlider').change(function() {
+    if (this.checked) {
+      Cookies.set('show_elderbane', 'yes', { expires: 365 })
+      spell_list = elderbane_spells;
+    } else {
+      Cookies.remove('show_elderbane')
+      spell_list = original_spells;
+    }
+    populateSpellList();
+    filterSpells();
+    // sort by the spell level twice to keep the same order
+    $('.spelllist > thead > tr > th').eq(1).click();
+    $('.spelllist > thead > tr > th').eq(1).click();
   });
 
   // add sorting to the spell list
@@ -48,7 +73,7 @@ $(function() {
   $('.spelllist > thead > tr > th').eq(1).click();    // initially sort by the spell level
 
   // populate details when spell row is clicked
-  $(".spelllist > tbody > tr").on('click', function() {
+  function rowClick() {
     $("#detailName").text(spell_list[this.id].name);
     $("#detailLevelSchool").text(spell_list[this.id].level + ' ' + spell_list[this.id].school);
     var link = window.location.href.split('?')[0] + '?' +
@@ -100,7 +125,7 @@ $(function() {
     if ($("#detailContainer").is(":hidden")) {
       $('#detailContainer').slideDown();
     }
-  });
+  }
 
   function copyToClip(htmlStr, plainStr) {
     // The newer API is here, but it sounds like Chrome doesn't support setting multiple formats through ClipboardItem yet:
