@@ -1,5 +1,6 @@
 $(function() {
   // populate the spell list
+  spell_list = original_spells;
   var spelllist = $('.spelllist');
   $.each(spell_list, function(index, item) {
     var table_row = $('<tr>', {id: index, 'sp-class': Object.keys(item.class).join(',')});
