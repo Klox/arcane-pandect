@@ -17,7 +17,16 @@ $(function() {
     $(".spelllist > tbody > tr").on('click', rowClick);
   }
 
-  if (Cookies.get('show_elderbane') == 'yes') {
+  // check if a elderbane was specified as a url parameter
+  var searchParams = new URLSearchParams(window.location.search)
+  var show_elderbane = false;
+  if (searchParams.has('elderbane')) {
+    show_elderbane = decodeURIComponent(searchParams.get('elderbane')) == "true";
+  } else {      // url parameter overrides the cookie
+    show_elderbane = Cookies.get('show_elderbane') == 'yes';
+  }
+
+  if (show_elderbane) {
     $('#elderbaneSlider').prop( "checked", true);
     spell_list = elderbane_spells;
   } else {
@@ -27,9 +36,11 @@ $(function() {
   populateSpellList();
   $('#elderbaneSlider').change(function() {
     if (this.checked) {
+      show_elderbane = true;
       Cookies.set('show_elderbane', 'yes', { expires: 365 })
       spell_list = elderbane_spells;
     } else {
+      show_elderbane = false;
       Cookies.remove('show_elderbane')
       spell_list = original_spells;
     }
@@ -77,7 +88,7 @@ $(function() {
     $("#detailName").text(spell_list[this.id].name);
     $("#detailLevelSchool").text(spell_list[this.id].level + ' ' + spell_list[this.id].school);
     var link = window.location.href.split('?')[0] + '?' +
-        jQuery.param({ spell:encodeURIComponent(spell_list[this.id].name.toLowerCase()) });
+        jQuery.param({ elderbane:show_elderbane, spell:encodeURIComponent(spell_list[this.id].name.toLowerCase()) });
     $("#directLink").attr("href", link);
     $("#clipboardItem").attr("href", link);
     $("#clipboardItem").text(spell_list[this.id].name);
@@ -158,7 +169,6 @@ $(function() {
   var filterSourceList = [];
 
   // check if a spell was specified in a url parameter
-  var searchParams = new URLSearchParams(window.location.search)
   if (searchParams.has('spell')) {
     var decodedSpell = decodeURIComponent(searchParams.get('spell'));
     $('#searchName').text(decodedSpell);
