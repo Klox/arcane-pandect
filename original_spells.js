@@ -9381,7 +9381,7 @@ var original_spells = {
      "description":"Of the many tactics employed by master magician and renowned adventurer Jim Darkmagic, the old glowing coin trick is a time-honored classic. When you cast the spell, you hurl the coin that is the spell's material component to any spot within range. The coin lights up as if under the effect of a <i>light</i> spell. Each creature of your choice that you can see within 30 feet of the coin must succeed on a Wisdom saving throw or be distracted for the duration. While distracted, a creature has disadvantage on Wisdom (Perception) checks and iniciative rolls.",
      "full_components":"S, M (a coin), R (2gp)"
    },
-   "Jim's Magic Missle":{
+   "Jim's Magic Missile":{
      "components":"VSR",
      "page":"ai 76",
      "range":"120 feet",
@@ -9392,7 +9392,7 @@ var original_spells = {
      "class":{
        "Wizard":"yes"
      },
-     "name":"Jim's Magic Missle",
+     "name":"Jim's Magic Missile",
      "ritual":"no",
      "concentration":"no",
      "description":"Any apprentice wizard can cast a boring old <i>magic missile</i>. Sure, it always strikes its target. Yawn. Do away with the drudgery of your grandfather's magic with this improved version of the spell, as used by Jim Darkmagic!<br/>You create three twisting, whistling, hypoallergenic, gluten-free darts of magical force. Each dart targets a creature of your choice that you can see within range. Make a ranged spell attack for each missile. On a hit, a missile deals 2d4 force damage to its target.<br/>lf the attack roll scores a critical hit, the target of that missile takes 5d4 force damage instead of you rolling damage twice for a critical hit. If the attack roll for any missile is a 1, all missiles miss their targets and blow up in your face. dealing 1 force damage per missile to you.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart, and the royalty component increases by 1 gp, for each slot level above 1st.",
