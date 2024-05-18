@@ -1973,9 +1973,9 @@ var elderbane_spells = {
       "duration":"1 hour",
       "school":"Divination",
       "components":"VSM",
-      "page":"phb 224",
-      "range":"Self",
-      "description":"For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.<br/>This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language.",
+      "page":"elder",
+      "range":"Touch",
+      "description":"You open the mind of one creature to understand languages it did not know. When you cast this spell, make a DC 10 ability check using your spellcasting ability. On a success, the target understands the literal meaning of any spoken or written language that it hears or sees. On a failure, the target only gains understanding of languages in the same language families as languages the target already knows. For the target to understand written language using this spell, it must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.<br/>This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language.<br/><strong>At higher levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you automatically succeed the ability check.",
       "full_components":"V, S, M (a pinch of soot and salt)"
    },
    "Freedom of Movement":{
@@ -8073,7 +8073,7 @@ var elderbane_spells = {
    },
    "Tongues":{
       "range":"Touch",
-      "page":"phb 283",
+      "page":"elder",
       "components":"VM",
       "duration":"1 hour",
       "level":"3rd",
@@ -8089,7 +8089,7 @@ var elderbane_spells = {
       "casting_time":"1 action",
       "concentration":"no",
       "ritual":"no",
-      "description":"This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.",
+      "description":"When you cast this spell, make a DC 10 ability check using your spellcasting ability. On a success, this spell grants the creature you touch the ability to understand any spoken language it hears. On a failure, this spell grants the creature the ability to understand spoken languages it hears if they are from a language family of a language the creature already understands. Moreover, when the target speaks, any creature that can hear the target understands what it says as long as that creature knows at least one language the target understands.<br/><strong>At higher levels.</strong> When you cast this spell using a spell slot of 4th level or higher, you automatically succeed the ability check.",
       "full_components":"V, M (a small clay model of a ziggurat)"
    },
    "Contingency":{
