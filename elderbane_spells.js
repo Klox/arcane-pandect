@@ -8357,7 +8357,7 @@ var elderbane_spells = {
      "ritual":"no",
      "concentration":"no",
      "description":"You impart latent luck to yourself or one willing creature you can see within range. When the chosen creature makes an attack roll, an ability check, or a saving throw before the spell ends, it can dismiss this spell on itself to roll an additional d20 and choose which of the d20s to use. Alternatively, when an attack roll is made against the chosen creature, it can dismiss this spell on itself to roll a d20 and choose which of the d20s to use, the one it rolled or the one the attacker rolled.<br/>If the original d20 roll has advantage or disadvantage, the creature rolls the additional d20 after advantage or disadvantage has been applied to the original roll.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each level above 2nd.",
-     "full_components":"V, S, M (a white pearl worth at least 100 gp, which the spell consumes)"
+     "full_components":"V, S, M (a white pearl worth at least 100 gp)"
    },
    "Gift of Alacrity":{
      "components":"VS",

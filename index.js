@@ -160,6 +160,7 @@ $(function() {
   });
 
   var filterName = "";
+  var filterExact = false;
   var filterClassList = [];
   var filterLevelList = [];
   var filterSchoolList = [];
@@ -173,12 +174,13 @@ $(function() {
     var decodedSpell = decodeURIComponent(searchParams.get('spell'));
     $('#searchName').text(decodedSpell);
     filterName = decodedSpell;
+    filterExact = true;
   }
 
   // the filter is dramatically faster when each global is passed
-  function filterSpellsInner(fName, fClass, fLevel, fSchool, fRitual, fCastingTime, fConcentration, fSource) {
+  function filterSpellsInner(fName, fExact, fClass, fLevel, fSchool, fRitual, fCastingTime, fConcentration, fSource) {
     spelllist.find('tr:gt(0)').filter(function() { $(this).toggle(
-      $(this).children(".sp-name:first").text().toLowerCase().includes(fName) &&
+      ((!fExact && $(this).children(".sp-name:first").text().toLowerCase().includes(fName)) || (fExact && $(this).children(".sp-name:first").text().toLowerCase() == fName)) &&
       (fClass.length == 0 || (fClass.filter(value => $(this).attr('sp-class').includes(value)).length > 0)) &&
       (fLevel.length == 0 || fLevel.indexOf($(this).children(".sp-level:first").text()) !== -1) &&
       (fSchool.length == 0 || fSchool.indexOf($(this).children(".sp-school:first").text()) !== -1) &&
@@ -196,7 +198,7 @@ $(function() {
     }
   }
   function filterSpells() {
-    filterSpellsInner(filterName, filterClassList, filterLevelList, filterSchoolList, filterRitualList, filterCastingTimeList, filterConcentrationList, filterSourceList);
+    filterSpellsInner(filterName, filterExact, filterClassList, filterLevelList, filterSchoolList, filterRitualList, filterCastingTimeList, filterConcentrationList, filterSourceList);
   }
 
   function selectionListChanged(list, view) {
@@ -315,6 +317,7 @@ $(function() {
         // don't call e.preventDefault() here so ESC will also cancel searches, etc.
         $('#searchName').text('');
         filterName = '';
+        filterExact = false;
         filterSpells();
         break;
       case 8:  // backspace
@@ -323,6 +326,7 @@ $(function() {
         var searchName = $('#searchName');
         searchName.text(searchName.text().slice(0, -1));
         filterName = searchName.text();
+        filterExact = false;
         filterSpells();
         break;
     }
@@ -334,8 +338,13 @@ $(function() {
       var searchName = $('#searchName');
       searchName.text(searchName.text() + key);
       filterName = searchName.text();
+      filterExact = false;
       filterSpells();
     }
   });
+  
+  // remove the url parameters since they will quickly become out of sync with the search
+  history.replaceState({}, '', window.location.pathname);
+
   filterSpells();
 });
