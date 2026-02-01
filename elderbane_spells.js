@@ -9732,7 +9732,7 @@ var elderbane_spells = {
      "casting_time":"1 minute",
      "range":"30 feet",
      "components":"VSMgp",
-     "full_components":"V, S, M (a crystal sphere, worth at least 200 gp, containing a diorama of a particular sphere)",
+     "full_components":"V, S, M (a crystal sphere, worth at least 200 gp)",
      "concentration":"no",
      "duration":"1 round",
      "ritual":"no",
