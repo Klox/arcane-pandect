@@ -3913,7 +3913,7 @@ var elderbane_spells = {
       "level":"3rd",
       "duration":"Instantaneous",
       "school":"Evocation",
-      "description":"As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.",
+      "description":"As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.",
       "full_components":"V"
    },
    "Alter Self":{
@@ -4364,7 +4364,7 @@ var elderbane_spells = {
       "components":"VS",
       "range":"Touch",
       "page":"phb 230",
-      "description":"A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.",
+      "description":"A creature you touch regains a number of hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 2d8 for each slot level above 1st.",
       "full_components":"V, S"
    },
    "Shape Water":{
@@ -5439,7 +5439,7 @@ var elderbane_spells = {
       "name":"Mass Cure Wounds",
       "ritual":"no",
       "concentration":"no",
-      "description":"A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th.",
+      "description":"A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 5d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th.",
       "full_components":"V, S"
    },
    "Wall of Thorns":{
@@ -5904,7 +5904,7 @@ var elderbane_spells = {
       "name":"Healing Word",
       "ritual":"no",
       "concentration":"no",
-      "description":"A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.",
+      "description":"A creature of your choice that you can see within range regains hit points equal to 2d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.<br/><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 2d4 for each slot level above 1st.",
       "full_components":"V"
    },
    "Gaseous Form":{
